@@ -1,0 +1,143 @@
+@import "config.scss";
+
+
+main 
+{
+	height:90vh;
+}
+
+#title_containner
+{
+	margin:0.6rem;
+	text-align:center;
+
+}
+
+#title
+{
+	margin:1.5rem 0.7rem;;
+	color: var(--persoWhite);
+	background:var(--persoBlue);
+	border-radius:0.7rem;
+	padding:0.3rem;
+	
+}
+
+#containner
+{
+
+	padding:1rem;
+	margin:0.9rem;
+
+	.projet_name
+	{
+		text-align:center;
+		text-transform: uppercase;
+
+	}
+
+	.card_container
+	{
+		margin: 1rem;
+	}
+
+	div
+	{
+		margin:1rem 0;
+		width:100%;
+	}
+
+	div section
+	{
+		margin:1.3rem 0;
+		width:30%
+	}
+
+	div section a 
+	{
+		background:var(--persoBlue);
+		padding:0.6rem;
+		border-radius:0.4rem;
+		color:var(--persoWhite);
+		width:100%;
+	    display:block;
+	    text-align:center;
+
+		&.delete 
+		{
+			background:tomato;
+
+		}
+
+		&.update
+		{
+			background:forestgreen;
+		}
+
+	}
+}
+
+footer 
+{
+	display:none;
+}
+
+
+
+@media screen  and (min-width: 425px) 
+{
+	#containner
+	{
+		padding:0.1rem;
+
+		div
+	  {
+
+		display: flex;
+		flex-wrap: wrap;
+
+	  }
+
+	  div section
+	  {
+	  	margin:0.6rem;
+
+	  }
+	}
+}
+
+
+@media screen  and (min-width: 550px) 
+{
+	#title_containner
+   {
+	margin:0.6rem;
+	text-align:right;
+  }
+
+	#containner
+	{
+
+		div
+	  {
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	  }
+
+	}
+
+}
+
+
+@media screen  and (min-width: 570px) 
+{
+	main 
+	{
+		height:80vh
+	}
+
+
+}
+

@@ -1,0 +1,258 @@
+@import "config.scss";
+
+/*sass scss/formulaire.scss css/formulaire.css -w*/
+
+main 
+{
+  height:auto;
+}
+
+
+#modif 
+{
+  text-align:center;
+}
+
+form 
+{
+	width:100%;
+  height:100%;
+  overflow-x: hidden;
+
+  .error
+  {
+    text-align: center;
+    margin-top: 0.9rem;
+    color:tomato;
+  }
+
+  span 
+  {
+    color:tomato;
+  }
+
+  progress 
+  {
+    width:90%;
+    margin:0.7rem;
+    height:2.5rem;
+    transition:width 0.5s;
+  }
+  
+}
+
+
+
+.containner
+{
+  display:flex;
+  justify-content: center;;
+  margin:1rem 0;
+  transition:transform 0.5s;
+
+  .div_responsive
+  {
+    width:100%;
+    margin-top:2rem;
+  }
+
+   .parent
+  {
+   padding:0.7rem;
+   width:100%;
+
+  	
+  }
+
+  .parent .inputContainner
+  {
+    margin:0.7rem 0 ;
+
+    input 
+    {
+      width:100%;
+      height:2rem;
+      outline: none;
+    }
+
+    label 
+    {
+      margin:0.4rem 0;
+      display:inline-block;
+      color:var(--persoBlue);
+    }
+
+  }
+
+  .parent .textAreaContainner
+  {
+
+    textarea
+    {
+      width:100%;
+      resize: none;
+    }
+
+    label 
+    {
+      margin:0.4rem 0;
+      display:inline-block;
+      color:var(--persoBlue);
+    }
+
+  }
+  .parent .radioContainner
+  {
+     
+     margin:0.5rem 0;
+  }
+
+  .div_title h1 
+  {
+    text-align: center;
+    color:var(--persoBlue);
+  }
+
+  .parent .formContainner
+  {
+    width:100%;
+
+    p 
+    {
+      color:var(--persoBlue);
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin:0.7rem 0;
+    }
+
+    #budget_devise
+    { 
+      width:100%;
+      display:flex;
+      /*align-items:center*/
+    }
+    #budget_devise .inputContainner 
+    {
+      width:70%;
+    }
+    #budget_devise .selectContainner
+    {
+      margin-top:1.9rem;
+      width:20%;
+    }
+
+    #budget_devise .selectContainner select
+    {
+       height:2rem;
+    }
+  }
+
+   .parent .selectContainner
+   {
+    select
+    {
+      width:100%;
+    }
+   }
+
+}
+
+
+#navigation
+{
+  height:4rem;
+}
+
+#navigationContainner
+{
+
+  width:100%;
+  display:flex;
+
+
+  button
+  {
+    width:8rem;
+    height:2.4rem;
+    font-size:1rem;
+    background:var(--persoBlue);
+    color:var(--persoWhite);
+    border:none;
+    border-radius:0.3rem;
+    margin:1rem;
+  }
+
+  #next,#option
+  {
+    margin-left: auto;
+  }
+
+
+  #option
+  {
+    height:100%;
+
+  }
+
+  #option a ,#option button
+  { 
+    display:block;
+    background:springgreen;
+    color:var(--persoWhite);
+    padding:0.6rem 0.9rem ;
+    border-radius:0.3rem;
+    margin:0.6rem;
+    text-align:center;
+  }
+
+}
+
+
+@media screen and (max-width:425px)
+{
+   #navigationContainner
+   {
+    #option a 
+    {
+      padding:0.2rem;
+    }
+   }
+}
+
+@media screen and (max-width: 800px)
+{
+   .containner
+   {
+
+    .div_responsive
+    {
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+      
+   }
+}
+
+@media screen and (min-width: 800px)
+{
+  .containner
+   {
+
+    .div_responsive
+    {
+      display:flex;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+      .parent
+      {
+        width:48%;
+        padding:0.9rem;
+
+        
+      }
+   }
+}

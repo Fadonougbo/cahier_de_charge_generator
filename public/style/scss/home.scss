@@ -1,0 +1,121 @@
+@import "config.scss";
+
+
+main 
+{
+   height:73vh
+}
+
+
+footer 
+{
+  height:11vh;
+}
+
+#description
+{
+
+	margin:0.8rem;
+
+	h2 
+	{
+			color:#4e42d4;
+			
+	}
+
+	h2 a
+		{
+			color:#0a2463;
+			text-decoration: underline;
+			font-weight:700;
+	   }
+
+}
+
+#home_parent
+{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items:center;
+	height:80%;
+	
+
+	& section
+	{	
+		 
+		 margin:2.5rem 0.5rem;
+		 width:95%;
+		 text-align: center;
+	}
+
+	section a 
+	{
+		color:#f7f9fb;
+		padding:0.9rem;
+		 background:#4e42d4;
+		 font-size: 0.8rem;
+		 -webkit-border-radius: 12px 12px 12px 12px;
+	    -moz-border-radius: 12px 12px 12px 12px;
+	    border-radius: 12px 12px 12px 12px;
+	}
+
+	
+}
+
+
+@media screen and (min-width:500px)
+{
+
+	#description
+{
+
+	h2 
+	{
+		text-align: center;
+	}
+
+}
+
+}
+
+@media screen and (min-width:600px)
+{
+
+	#home_parent
+{
+	
+	flex-direction:row;
+	
+
+	
+}
+
+}
+
+
+
+@media screen and (min-width:600px)
+{
+
+	#home_parent
+{
+	
+
+	
+	section a 
+	{
+		
+			padding:1.3rem;
+			 font-size: 2.5rem;
+	    background:#4e42d4;
+	    display: block;
+	    -webkit-border-radius: 12px 12px 12px 12px;
+	    -moz-border-radius: 12px 12px 12px 12px;
+	    border-radius: 12px 12px 12px 12px;
+	}
+
+	
+}
+
+}

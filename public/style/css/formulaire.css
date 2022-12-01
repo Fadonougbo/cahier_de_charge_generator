@@ -1,0 +1,322 @@
+:root {
+  --persoBlue:#4e42d4;
+  --persoWhite:#f7f9fb;
+  --persoRedTomate:#ef476f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Lora, sans-serif;
+}
+* a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: Lora;
+  src: url("../../font/Lora-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: Lora;
+  src: url("../../font/Lora-MediumItalic.ttf") format("truetype");
+  font-weight: medium;
+}
+body.hidden {
+  overflow: hidden;
+}
+
+header {
+  width: 100%;
+  background: var(--persoBlue);
+  color: #fff;
+  height: 5rem;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+header #title {
+  width: 30%;
+  height: 100%;
+  padding: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .logo_containner {
+  margin: 0 0.3rem;
+  width: 40%;
+}
+header .logo_containner a {
+  width: 4rem;
+  height: 4rem;
+  display: block;
+  text-align: center;
+  line-height: 4rem;
+  font-size: 3.5rem;
+  background: var(--persoWhite);
+  color: var(--persoBlue);
+  border-radius: 50%;
+}
+header .menuIconContainner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.8s;
+  overflow: hidden;
+}
+header .menuIconContainner span {
+  display: block;
+  width: 2rem;
+  height: 0.4rem;
+  background: #dee2e6;
+  border-radius: 0.2rem;
+  margin: 0.1rem 0.8rem;
+}
+header .menuIconContainner.rotate {
+  transform: rotate(450deg);
+}
+header aside {
+  z-index: 20;
+}
+header aside .user_info {
+  display: flex;
+}
+header aside .user_info p, header aside .user_info a {
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin: 0.4rem;
+  display: flex;
+  align-items: center;
+  color: var(--persoWhite);
+}
+header aside .user_info p::before, header aside .user_info a::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  background-size: cover;
+}
+header aside .user_info p::before {
+  background-image: url("../../icons/user-3296-aside.png");
+}
+header aside .user_info a:nth-child(3)::before {
+  background-image: url("../../icons/home-2490-aside.png");
+}
+header aside .user_info a:nth-child(4)::before {
+  background-image: url("../../icons/turn-off-4782-aside.png");
+}
+
+main {
+  height: 58vh;
+}
+
+footer {
+  background: var(--persoBlue);
+  width: 100%;
+  height: 10vh;
+}
+
+@media screen and (max-width: 599px) {
+  header aside {
+    position: absolute;
+    width: 14.6rem;
+    top: 5rem;
+    left: 0;
+    bottom: 0;
+    background: #000;
+    transition: transform 0.3s;
+    overflow: hidden;
+    transform: translateX(-14.7rem);
+  }
+  header aside.visible {
+    transform: translateX(0);
+  }
+  header aside .user_info {
+    display: flex;
+    flex-direction: column;
+  }
+  header aside .user_info p, header aside .user_info a {
+    font-size: 1.5rem;
+    margin: 0.6rem;
+  }
+  header aside .user_info p::before, header aside .user_info a::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+  }
+}
+@media screen and (min-width: 600px) {
+  header .menuIconContainner {
+    display: none;
+  }
+  aside {
+    display: flex;
+    align-items: center;
+  }
+}
+/*sass scss/formulaire.scss css/formulaire.css -w*/
+main {
+  height: auto;
+}
+
+#modif {
+  text-align: center;
+}
+
+form {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+form .error {
+  text-align: center;
+  margin-top: 0.9rem;
+  color: tomato;
+}
+form span {
+  color: tomato;
+}
+form progress {
+  width: 90%;
+  margin: 0.7rem;
+  height: 2.5rem;
+  transition: width 0.5s;
+}
+
+.containner {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+  transition: transform 0.5s;
+}
+.containner .div_responsive {
+  width: 100%;
+  margin-top: 2rem;
+}
+.containner .parent {
+  padding: 0.7rem;
+  width: 100%;
+}
+.containner .parent .inputContainner {
+  margin: 0.7rem 0;
+}
+.containner .parent .inputContainner input {
+  width: 100%;
+  height: 2rem;
+  outline: none;
+}
+.containner .parent .inputContainner label {
+  margin: 0.4rem 0;
+  display: inline-block;
+  color: var(--persoBlue);
+}
+.containner .parent .textAreaContainner textarea {
+  width: 100%;
+  resize: none;
+}
+.containner .parent .textAreaContainner label {
+  margin: 0.4rem 0;
+  display: inline-block;
+  color: var(--persoBlue);
+}
+.containner .parent .radioContainner {
+  margin: 0.5rem 0;
+}
+.containner .div_title h1 {
+  text-align: center;
+  color: var(--persoBlue);
+}
+.containner .parent .formContainner {
+  width: 100%;
+}
+.containner .parent .formContainner p {
+  color: var(--persoBlue);
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin: 0.7rem 0;
+}
+.containner .parent .formContainner #budget_devise {
+  width: 100%;
+  display: flex;
+  /*align-items:center*/
+}
+.containner .parent .formContainner #budget_devise .inputContainner {
+  width: 70%;
+}
+.containner .parent .formContainner #budget_devise .selectContainner {
+  margin-top: 1.9rem;
+  width: 20%;
+}
+.containner .parent .formContainner #budget_devise .selectContainner select {
+  height: 2rem;
+}
+.containner .parent .selectContainner select {
+  width: 100%;
+}
+
+#navigation {
+  height: 4rem;
+}
+
+#navigationContainner {
+  width: 100%;
+  display: flex;
+}
+#navigationContainner button {
+  width: 8rem;
+  height: 2.4rem;
+  font-size: 1rem;
+  background: var(--persoBlue);
+  color: var(--persoWhite);
+  border: none;
+  border-radius: 0.3rem;
+  margin: 1rem;
+}
+#navigationContainner #next, #navigationContainner #option {
+  margin-left: auto;
+}
+#navigationContainner #option {
+  height: 100%;
+}
+#navigationContainner #option a, #navigationContainner #option button {
+  display: block;
+  background: springgreen;
+  color: var(--persoWhite);
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.3rem;
+  margin: 0.6rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 425px) {
+  #navigationContainner #option a {
+    padding: 0.2rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .containner .div_responsive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 800px) {
+  .containner .div_responsive {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .containner .parent {
+    width: 48%;
+    padding: 0.9rem;
+  }
+}
+
+/*# sourceMappingURL=formulaire.css.map */

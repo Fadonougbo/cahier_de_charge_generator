@@ -1,0 +1,228 @@
+:root {
+  --persoBlue:#4e42d4;
+  --persoWhite:#f7f9fb;
+  --persoRedTomate:#ef476f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Lora, sans-serif;
+}
+* a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: Lora;
+  src: url("../../font/Lora-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: Lora;
+  src: url("../../font/Lora-MediumItalic.ttf") format("truetype");
+  font-weight: medium;
+}
+body.hidden {
+  overflow: hidden;
+}
+
+header {
+  width: 100%;
+  background: var(--persoBlue);
+  color: #fff;
+  height: 5rem;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+header #title {
+  width: 30%;
+  height: 100%;
+  padding: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .logo_containner {
+  margin: 0 0.3rem;
+  width: 40%;
+}
+header .logo_containner a {
+  width: 4rem;
+  height: 4rem;
+  display: block;
+  text-align: center;
+  line-height: 4rem;
+  font-size: 3.5rem;
+  background: var(--persoWhite);
+  color: var(--persoBlue);
+  border-radius: 50%;
+}
+header .menuIconContainner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.8s;
+  overflow: hidden;
+}
+header .menuIconContainner span {
+  display: block;
+  width: 2rem;
+  height: 0.4rem;
+  background: #dee2e6;
+  border-radius: 0.2rem;
+  margin: 0.1rem 0.8rem;
+}
+header .menuIconContainner.rotate {
+  transform: rotate(450deg);
+}
+header aside {
+  z-index: 20;
+}
+header aside .user_info {
+  display: flex;
+}
+header aside .user_info p, header aside .user_info a {
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin: 0.4rem;
+  display: flex;
+  align-items: center;
+  color: var(--persoWhite);
+}
+header aside .user_info p::before, header aside .user_info a::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  background-size: cover;
+}
+header aside .user_info p::before {
+  background-image: url("../../icons/user-3296-aside.png");
+}
+header aside .user_info a:nth-child(3)::before {
+  background-image: url("../../icons/home-2490-aside.png");
+}
+header aside .user_info a:nth-child(4)::before {
+  background-image: url("../../icons/turn-off-4782-aside.png");
+}
+
+main {
+  height: 58vh;
+}
+
+footer {
+  background: var(--persoBlue);
+  width: 100%;
+  height: 10vh;
+}
+
+@media screen and (max-width: 599px) {
+  header aside {
+    position: absolute;
+    width: 14.6rem;
+    top: 5rem;
+    left: 0;
+    bottom: 0;
+    background: #000;
+    transition: transform 0.3s;
+    overflow: hidden;
+    transform: translateX(-14.7rem);
+  }
+  header aside.visible {
+    transform: translateX(0);
+  }
+  header aside .user_info {
+    display: flex;
+    flex-direction: column;
+  }
+  header aside .user_info p, header aside .user_info a {
+    font-size: 1.5rem;
+    margin: 0.6rem;
+  }
+  header aside .user_info p::before, header aside .user_info a::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+  }
+}
+@media screen and (min-width: 600px) {
+  header .menuIconContainner {
+    display: none;
+  }
+  aside {
+    display: flex;
+    align-items: center;
+  }
+}
+main {
+  height: 73vh;
+}
+
+footer {
+  height: 11vh;
+}
+
+#description {
+  margin: 0.8rem;
+}
+#description h2 {
+  color: #4e42d4;
+}
+#description h2 a {
+  color: #0a2463;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+#home_parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+#home_parent section {
+  margin: 2.5rem 0.5rem;
+  width: 95%;
+  text-align: center;
+}
+#home_parent section a {
+  color: #f7f9fb;
+  padding: 0.9rem;
+  background: #4e42d4;
+  font-size: 0.8rem;
+  -webkit-border-radius: 12px 12px 12px 12px;
+  -moz-border-radius: 12px 12px 12px 12px;
+  border-radius: 12px 12px 12px 12px;
+}
+
+@media screen and (min-width: 500px) {
+  #description h2 {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 600px) {
+  #home_parent {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 600px) {
+  #home_parent section a {
+    padding: 1.3rem;
+    font-size: 2.5rem;
+    background: #4e42d4;
+    display: block;
+    -webkit-border-radius: 12px 12px 12px 12px;
+    -moz-border-radius: 12px 12px 12px 12px;
+    border-radius: 12px 12px 12px 12px;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */
